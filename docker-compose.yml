@@ -1,0 +1,11 @@
+# This file is part of the nginx-web project.
+
+# Volumes list
+volumes:
+  html:
+
+# Networks list
+# This newtwork is internal and not accessible from outside and is expected to be used with a reverse proxy like project shalmaka/nginx-ingress
+networks:
+  internal:
+    internal: true
