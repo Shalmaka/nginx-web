@@ -28,8 +28,8 @@ RUN mkdir -p /usr/share/nginx/html && \
     chown -R nginx:nginx /usr/share/nginx/html
 
 # Prepare log files and ownership
-RUN touch /var/log/nginx/audit_platform_error.log && \
-    touch /var/log/nginx/audit_platform_access.log && \
+RUN touch /var/log/nginx/error.log && \
+    touch /var/log/nginx/access.log && \
     chown -R nginx:nginx /var/log/nginx/
 
 # Prepare NGINX runtime dirs and certs
