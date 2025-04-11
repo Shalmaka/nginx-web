@@ -18,7 +18,7 @@ services:
       # Certificates
       # This is a read-only volume, so the container cannot modify the certificates
       # Enable this if you want to use HTTPS
-      # - ./certs:/etc/ssl/certs:ro
+      # - ./certs:/usr/share/nginx/certs:ro
 
     networks:
       internal: {}

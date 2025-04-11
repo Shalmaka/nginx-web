@@ -33,9 +33,9 @@ RUN touch /var/log/nginx/audit_platform_error.log && \
     chown -R nginx:nginx /var/log/nginx/
 
 # Prepare NGINX runtime dirs and certs
-RUN mkdir -p /var/cache/nginx /www/certs && \
+RUN mkdir -p /var/cache/nginx /usr/share/nginx/certs && \
     touch /var/run/nginx.pid && \
-    chown -R nginx:nginx /var/cache/nginx /var/run/nginx.pid /etc/nginx /www
+    chown -R nginx:nginx /var/cache/nginx /var/run/nginx.pid /etc/nginx /usr/share/nginx/certs
 
 # Set user (non-root)
 USER nginx

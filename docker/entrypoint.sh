@@ -47,8 +47,8 @@ fi
 if [ -n "${INTERFACE_HTTPS_PORT:-}" ]; then
   HTTPS_LISTEN_DIRECTIVE="listen ${INTERFACE_HTTPS_PORT} ssl;"
   SSL_CONFIG_DIRECTIVE="
-    ssl_certificate       /www/certs/${CERT_FILENAME};
-    ssl_certificate_key   /www/certs/${KEY_FILENAME};
+    ssl_certificate       /usr/share/nginx/certs/${CERT_FILENAME};
+    ssl_certificate_key   /usr/share/nginx/certs/${KEY_FILENAME};
     ssl_protocols         TLSv1.2 TLSv1.3;
     ssl_prefer_server_ciphers on;
     ssl_ecdh_curve        secp521r1:secp384r1:prime256v1;
