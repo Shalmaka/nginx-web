@@ -23,7 +23,7 @@ RUN chmod 700 /entrypoint.sh && \
 COPY nginx.base.conf /etc/nginx/nginx.conf
 COPY nginx.template.conf /etc/nginx/nginx.template
 
-# Optional: leave /usr/share/nginx/html owned by nginx, but writeable externally via volume
+# Leave /usr/share/nginx/html owned by nginx, but writeable externally via volume
 RUN mkdir -p /usr/share/nginx/html && \
     chown -R nginx:nginx /usr/share/nginx/html
 
